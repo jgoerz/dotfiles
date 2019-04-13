@@ -169,10 +169,6 @@ set cmdheight=2
 " set noshowmode
 set laststatus=2
 
-" Modify the colors of the autocomplete popup menu
-highlight Pmenu ctermfg=black ctermbg=cyan  " normal item
-highlight PmenuSel ctermfg=cyan  ctermbg=black " selected item
-
 
 " Disable the gnome "help" key, it's too close to the escape and pops up an
 " app.
@@ -184,6 +180,11 @@ source $VIMRUNTIME/colors/koehler.vim
 
 " Highlighting for man pages
 source $VIMRUNTIME/ftplugin/man.vim
+
+" Modify the colors of the autocomplete popup menu
+" These need to be sourced after koehler.vim
+highlight Pmenu ctermfg=black ctermbg=cyan  " normal item
+highlight PmenuSel ctermfg=cyan  ctermbg=black " selected item
 
 "# set list
 ""to create '·' do :set digraphs, then type . <backspace> M

@@ -13,6 +13,10 @@ else
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+  "This is a builtin for Vim8
+  packadd! matchit
+  " For Vim < 8: runtime macros/matchit.vim
+
   " https://github.com/sheerun/vim-polyglot
   call minpac#add('sheerun/vim-polyglot')
 

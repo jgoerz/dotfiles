@@ -147,6 +147,22 @@ else
     " set completeopt-=preview 
     "set completeopt+=noinsert 
 
+  " Make testing quick and simple with tmux.
+  call minpac#add('jgdavey/vim-turbux')
+    let g:turbux_command_prefix = 'bundle exec'  " default prefix
+    function! s:be_prefix()
+      let g:turbux_command_prefix = 'bundle exec'
+    endfunction
+    noremap  <leader>bp :<C-u>call <SID>be_prefix()<cr>
+
+    function! s:default_prefix()
+      let g:turbux_command_prefix = ''
+    endfunction
+    noremap  <leader>dp :<C-u>call <SID>default_prefix()<cr>
+
+  call minpac#add('jgdavey/tslime.vim')
+    let g:tslime_always_current_session = 1
+    let g:tslime_always_current_window = 1
 endif
 
 

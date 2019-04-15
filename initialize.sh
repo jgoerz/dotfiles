@@ -10,7 +10,7 @@ if [ $? != 0 ]; then
   echo "Need to install python3, pip3"
   echo "pip3 install pynvim"
   echo ""
-  exit 1
+ A exit 1
 fi
 
 mkdir -p pack/minpac/{opt,start}
@@ -18,5 +18,5 @@ if ! [ -d pack/minpac/opt/minpac ]; then
   git clone git@github.com:k-takata/minpac.git pack/minpac/opt/minpac
 fi
 echo ""
-echo "open up vim and run :call minpack#update()<CR>"
+echo "open up vim and run :call minpac#update()"
 echo ""

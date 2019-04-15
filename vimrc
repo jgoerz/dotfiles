@@ -140,7 +140,7 @@ else
     " only needed if echo exepath('python3') is empty
     " let g:python3_host_prog = /usr/bin/python3
 
-	" Echo text from autocomplete to command line, currently only works well
+  " Echo text from autocomplete to command line, currently only works well
   " with alchemist/elixirsense
   call minpac#add('Shougo/echodoc.vim')
     let g:echodoc#enable_at_startup=1
@@ -221,7 +221,17 @@ hi PMenuSel  ctermfg=yellow ctermbg=darkgrey
 autocmd ColorScheme * hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
 autocmd ColorScheme * hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
 
-"# set list
+"autoclosing of various types of pairs (DOES NOT WORK in paste mode)
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
+" inoremap jj <ESC>
+
+
 ""to create '·' do :set digraphs, then type . <backspace> M
 ""to create '≫' do :set digraphs, then type > <backspace> >
 ""set listchars=trail:·,nbsp:·,tab:≫·

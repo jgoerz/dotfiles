@@ -163,6 +163,8 @@ else
   call minpac#add('jgdavey/tslime.vim')
     let g:tslime_always_current_session = 1
     let g:tslime_always_current_window = 1
+
+  call minpac#add('vimoutliner/vimoutliner')
 endif
 
 
@@ -184,6 +186,7 @@ set visualbell
 set cmdheight=2
 " set noshowmode
 set laststatus=2
+set statusline+=%F " Put the filename in the statusline
 
 
 " Disable the gnome "help" key, it's too close to the escape and pops up an
@@ -193,14 +196,30 @@ imap <F1> <nop>
 
 filetype plugin indent on
 source $VIMRUNTIME/colors/koehler.vim
+syntax on
 
 " Highlighting for man pages
 source $VIMRUNTIME/ftplugin/man.vim
 
 " Modify the colors of the autocomplete popup menu
 " These need to be sourced after koehler.vim
-highlight Pmenu ctermfg=black ctermbg=cyan  " normal item
-highlight PmenuSel ctermfg=cyan  ctermbg=black " selected item
+" highlight Pmenu ctermfg=black ctermbg=cyan  " normal item
+" highlight PmenuSel ctermfg=cyan  ctermbg=black " selected item
+
+" Override the default tab color (has to come after syntax on)
+hi SpecialKey cterm=bold ctermfg=darkblue
+
+" Koehler gets these all wrong
+" See :help highlight-groups
+hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
+hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
+hi PMenu  ctermfg=cyan ctermbg=darkgrey
+hi PMenuSel  ctermfg=yellow ctermbg=darkgrey
+
+" When restoring from sessions, the color scheme doesn't get updated for the
+" statusline without these.
+autocmd ColorScheme * hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
+autocmd ColorScheme * hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
 
 "# set list
 ""to create '·' do :set digraphs, then type . <backspace> M

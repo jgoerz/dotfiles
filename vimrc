@@ -93,6 +93,8 @@ else
 
   " https://github.com/mhinz/vim-mix-format
   call minpac#add('mhinz/vim-mix-format')
+    let g:mix_format_on_save = 1
+    " let g:mix_format_options = '--check-equivalent'
 
   " https://github.com/airblade/vim-gitgutter
   call minpac#add('airblade/vim-gitgutter')

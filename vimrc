@@ -167,6 +167,7 @@ else
     let g:tslime_always_current_window = 1
 
   call minpac#add('vimoutliner/vimoutliner')
+    let maplocalleader = ',,'
 endif
 
 
@@ -224,11 +225,11 @@ autocmd ColorScheme * hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
 autocmd ColorScheme * hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
 
 "autoclosing of various types of pairs (DOES NOT WORK in paste mode)
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
 " inoremap jj <ESC>

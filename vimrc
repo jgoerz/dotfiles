@@ -168,6 +168,7 @@ else
 
   call minpac#add('vimoutliner/vimoutliner')
     let maplocalleader = ',,'
+    " see vimoutlinerrc for configuration
 endif
 
 
@@ -216,6 +217,12 @@ hi SpecialKey cterm=bold ctermfg=darkblue
 " See :help highlight-groups
 hi clear SpellBad
 hi SpellBad cterm=underline
+hi clear SpellCap
+hi SpellCap cterm=underline
+hi clear SpellRare
+hi SpellRare cterm=underline
+hi clear SpellLocal
+hi SpellLocal cterm=underline
 hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
 hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
 hi PMenu  ctermfg=cyan ctermbg=darkgrey

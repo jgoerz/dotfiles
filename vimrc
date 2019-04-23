@@ -214,6 +214,8 @@ hi SpecialKey cterm=bold ctermfg=darkblue
 
 " Koehler gets these all wrong
 " See :help highlight-groups
+hi clear SpellBad
+hi SpellBad cterm=underline
 hi StatusLine ctermbg=darkgrey cterm=bold ctermfg=cyan
 hi StatusLineNC ctermbg=darkgrey cterm=bold ctermfg=cyan
 hi PMenu  ctermfg=cyan ctermbg=darkgrey
